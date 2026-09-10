@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX Writing — Srimathi R</title>
+<meta name="description" content="UX writing and content design work by Srimathi R.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.ux-hero{padding:110px 0 80px;border-bottom:1px solid rgba(20,20,20,.12)}
+.ux-kicker,.ux-section-number,.ux-sample-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;opacity:.55}
+.ux-kicker{margin-bottom:22px;font-weight:600}
+.ux-hero h1{max-width:900px;font-size:clamp(3.2rem,7vw,6.8rem);line-height:.94;letter-spacing:-.055em;margin:0 0 30px}
+.ux-hero h1 em{font-style:normal;opacity:.5}
+.ux-intro{max-width:720px;font-size:1.18rem;line-height:1.7;opacity:.72}
+.ux-section{padding:90px 0}
+.ux-section-header{display:grid;grid-template-columns:180px 1fr;gap:40px;margin-bottom:48px}
+.ux-section h2{max-width:760px;font-size:clamp(2rem,4vw,3.8rem);line-height:1.05;letter-spacing:-.035em;margin:0}
+.ux-section-lead{max-width:700px;margin:20px 0 0;line-height:1.7;opacity:.68}
+.ux-sample-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ux-sample{border:1px solid rgba(20,20,20,.13);padding:30px;background:rgba(255,255,255,.38)}
+.ux-sample-label{margin-bottom:24px}
+.ux-before-after{display:grid;gap:12px}
+.ux-copy-box{padding:18px 20px;border-radius:4px;background:rgba(20,20,20,.045)}
+.ux-copy-box small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;opacity:.48;margin-bottom:8px}
+.ux-copy-box strong{display:block;font-size:1rem;line-height:1.45;font-weight:600}
+.ux-reason{margin-top:20px;font-size:.9rem;line-height:1.65;opacity:.68}
+.ux-dark{background:#171717;color:#f5f1e9}
+.ux-dark .ux-section-lead,.ux-dark .ux-section-number{opacity:.58}
+.ux-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.15)}
+.ux-principle{padding:32px;background:#171717;min-height:190px}
+.ux-principle span{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.48;margin-bottom:25px}
+.ux-principle h3{font-size:1.3rem;margin:0 0 12px}
+.ux-principle p{margin:0;line-height:1.6;opacity:.65;font-size:.92rem}
+.ux-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.ux-step{border-top:1px solid rgba(20,20,20,.18);padding-top:20px}
+.ux-step-number{font-size:.72rem;letter-spacing:.1em;opacity:.48}
+.ux-step h3{margin:28px 0 10px;font-size:1.15rem}
+.ux-step p{margin:0;line-height:1.65;font-size:.9rem;opacity:.68}
+.ux-callout{margin-top:60px;padding:34px;border-left:2px solid currentColor;background:rgba(20,20,20,.04);max-width:820px}
+.ux-callout p{margin:0;font-size:1.1rem;line-height:1.65}
+.ux-note{margin-top:30px;font-size:.78rem;line-height:1.6;opacity:.52;max-width:760px}
+@media(max-width:760px){.ux-hero{padding:80px 0 60px}.ux-section{padding:65px 0}.ux-section-header{grid-template-columns:1fr;gap:15px}.ux-sample-grid,.ux-principles,.ux-process{grid-template-columns:1fr}.ux-sample{padding:24px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav">
+<a class="logo" href="../index.html">Srimathi R</a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+<nav class="nav-links"><a href="../work.html">Work</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+</div>
+</header>
+
+<main>
+<section class="ux-hero"><div class="container">
+<div class="ux-kicker">UX Writing / Content Design</div>
+<h1>Words are part of the <em>interface.</em></h1>
+<p class="ux-intro">I write the language users rely on to understand a product, make decisions, recover from errors and move through complex workflows with confidence. My UX writing work sits at the intersection of product thinking, technical understanding and clear communication.</p>
+</div></section>
+
+<section class="ux-section"><div class="container">
+<div class="ux-section-header"><div class="ux-section-number">01 / Microcopy</div><div><h2>Small words. High-impact moments.</h2><p class="ux-section-lead">The strongest UI copy does more than sound polished. It tells users what happened, what matters and what they can do next.</p></div></div>
+<div class="ux-sample-grid">
+
+<article class="ux-sample"><div class="ux-sample-label">System feedback</div><div class="ux-before-after">
+<div class="ux-copy-box"><small>Before</small><strong>Changes saved successfully.</strong></div>
+<div class="ux-copy-box"><small>After</small><strong>Your notification settings are saved.</strong></div>
+</div><p class="ux-reason">The revised message confirms exactly what changed instead of giving a generic success message.</p></article>
+
+<article class="ux-sample"><div class="ux-sample-label">Permission / blocked state</div><div class="ux-before-after">
+<div class="ux-copy-box"><small>Before</small><strong>Admin access required.</strong></div>
+<div class="ux-copy-box"><small>After</small><strong>Ask an admin to enable this for your workspace.</strong></div>
+</div><p class="ux-reason">Instead of stopping at the problem, the message gives the user a clear recovery path.</p></article>
+
+<article class="ux-sample"><div class="ux-sample-label">Error message</div><div class="ux-before-after">
+<div class="ux-copy-box"><small>Before</small><strong>Invalid input.</strong></div>
+<div class="ux-copy-box"><small>After</small><strong>Enter a valid member name and try again.</strong></div>
+</div><p class="ux-reason">The message identifies the user's task and provides a specific next step.</p></article>
+
+<article class="ux-sample"><div class="ux-sample-label">Action label</div><div class="ux-before-after">
+<div class="ux-copy-box"><small>Before</small><strong>Submit</strong></div>
+<div class="ux-copy-box"><small>After</small><strong>Save changes</strong></div>
+</div><p class="ux-reason">The label names the outcome of the action, helping users understand what will happen before they click.</p></article>
+
+</div>
+<p class="ux-note">The examples on this page are representative/recreated samples used to demonstrate my UX writing approach. Confidential product content is not reproduced.</p>
+</div></section>
+
+<section class="ux-section ux-dark"><div class="container">
+<div class="ux-section-header"><div class="ux-section-number">02 / Product language</div><div><h2>Consistency is a usability feature.</h2><p class="ux-section-lead">In enterprise products, terminology can become fragmented across screens, teams and releases. I approach UX writing as a system: define the language, apply it consistently and make the reasoning reusable.</p></div></div>
+<div class="ux-principles">
+<article class="ux-principle"><span>01</span><h3>Name the user's action</h3><p>Use labels that describe the result or action rather than generic interface language.</p></article>
+<article class="ux-principle"><span>02</span><h3>Explain what matters</h3><p>Prioritize information that helps users decide, act or recover from a problem.</p></article>
+<article class="ux-principle"><span>03</span><h3>Make the next step visible</h3><p>When something goes wrong, tell users what they can do instead of leaving them at a dead end.</p></article>
+</div>
+</div></section>
+
+<section class="ux-section"><div class="container">
+<div class="ux-section-header"><div class="ux-section-number">03 / AI + enterprise UX</div><div><h2>Writing for products that explain themselves.</h2><p class="ux-section-lead">My technical writing background helps me work comfortably with complex products, developer workflows and AI-driven experiences. For these interfaces, UX writing has to balance simplicity with technical accuracy.</p></div></div>
+<div class="ux-process">
+<article class="ux-step"><div class="ux-step-number">01 — Understand</div><h3>Learn the workflow</h3><p>Understand the user's goal, product behavior, technical constraints and points of uncertainty.</p></article>
+<article class="ux-step"><div class="ux-step-number">02 — Structure</div><h3>Clarify the information</h3><p>Decide what users need to know now, what can wait and what belongs in supporting guidance.</p></article>
+<article class="ux-step"><div class="ux-step-number">03 — Write</div><h3>Choose precise language</h3><p>Write labels, prompts, errors, confirmations, empty states and guidance that match the user's context.</p></article>
+<article class="ux-step"><div class="ux-step-number">04 — Refine</div><h3>Review the experience</h3><p>Work with design and engineering to check hierarchy, terminology, accessibility and implementation constraints.</p></article>
+</div>
+<div class="ux-callout"><p><strong>My goal is not to make interfaces sound clever.</strong> It is to make the product easier to understand at the moment a user needs it.</p></div>
+</div></section>
+</main>
+<script src="../js/main.js"></script>
+</body>
+</html>
