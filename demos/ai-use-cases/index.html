@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Use Cases Demo — Srimathi R</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f5ef;color:#181818;font-family:"DM Sans",sans-serif}.wrap{max-width:950px;margin:auto;padding:55px 25px}.back{font-size:13px;font-weight:700}.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:700;color:#777;margin-top:65px}.hero h1{font-family:"Playfair Display",serif;font-size:65px;line-height:1;margin:12px 0}.hero p{max-width:650px;color:#666;font-size:18px}.demo{margin-top:55px;display:grid;grid-template-columns:280px 1fr;gap:22px}.panel,.result{background:#fff;border:1px solid #ddd8cf;padding:24px}.panel h2,.result h2{font-family:"Playfair Display",serif;margin-top:0}.usecase{display:block;width:100%;text-align:left;background:#f4f1ea;border:1px solid #ddd8cf;padding:13px;margin:9px 0;cursor:pointer;font:inherit}.usecase.active{background:#181818;color:#fff}.label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;color:#888;margin:22px 0 8px}textarea{width:100%;min-height:120px;border:1px solid #ccc;padding:12px;font:inherit;resize:vertical}button.run{margin-top:15px;background:#181818;color:#fff;border:0;padding:13px 18px;font-weight:700;cursor:pointer}.output{background:#f5f2ea;padding:18px;margin-top:18px;min-height:130px;line-height:1.6}.tag{display:inline-block;font-size:10px;letter-spacing:.1em;border:1px solid #ccc;padding:4px 7px;margin-bottom:14px}@media(max-width:700px){.hero h1{font-size:48px}.demo{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../index.html">← Back to portfolio</a>
+<div class="hero"><div class="eyebrow">AI PRODUCT CONTENT · INTERACTIVE DEMO</div><h1>AI use cases, made understandable.</h1><p>A small fictional prototype showing how I structure AI experiences around intent, context, action, and useful output.</p></div>
+<div class="demo">
+<div class="panel"><h2>Choose a use case</h2>
+<button class="usecase active" data-type="doc">Generate documentation outline</button>
+<button class="usecase" data-type="release">Draft release notes</button>
+<button class="usecase" data-type="trouble">Explain a technical issue</button>
+<button class="usecase" data-type="ux">Improve UX microcopy</button>
+</div>
+<div class="result"><div class="tag" id="tag">DOCUMENTATION</div><h2 id="title">Generate documentation outline</h2><label class="label" for="context">CONTEXT</label><textarea id="context">A developer needs to configure a new enterprise agent and verify that it is working.</textarea><button class="run" id="run">Generate structured result</button><div class="output" id="output">Your structured result will appear here.</div></div>
+</div>
+</div>
+<script>
+const data={
+doc:{tag:"DOCUMENTATION",title:"Generate documentation outline",out:"Suggested structure:<br><br><b>1. Overview</b> — What the agent does and when to use it.<br><b>2. Prerequisites</b> — Access, permissions, dependencies.<br><b>3. Configure</b> — Required settings and examples.<br><b>4. Run</b> — Complete the task step by step.<br><b>5. Verify</b> — Confirm expected behavior.<br><b>6. Troubleshoot</b> — Common failures and recovery."},
+release:{tag:"RELEASE NOTES",title:"Draft release notes",out:"Suggested release note:<br><br><b>New:</b> Configure and run multiple migration waves in a single workflow session.<br><br><b>Why it matters:</b> Teams can continue migration work without restarting the workflow between logical groups."},
+trouble:{tag:"TECHNICAL EXPLANATION",title:"Explain a technical issue",out:"Start with the user-visible symptom, then explain the likely cause in plain language, followed by the safest next action. Avoid exposing implementation detail unless it helps the user recover."},
+ux:{tag:"UX WRITING",title:"Improve UX microcopy",out:"Example:<br><br><b>Before:</b> Submit<br><b>After:</b> Submit assessment<br><br><b>Supporting guidance:</b> “Complete all required questions before submitting. You can save your progress and return later.”"}
+};
+let type="doc";
+const buttons=document.querySelectorAll(".usecase");
+buttons.forEach(b=>b.onclick=()=>{buttons.forEach(x=>x.classList.remove("active"));b.classList.add("active");type=b.dataset.type;document.getElementById("tag").textContent=data[type].tag;document.getElementById("title").textContent=data[type].title;document.getElementById("output").textContent="Your structured result will appear here.";});
+document.getElementById("run").onclick=()=>{document.getElementById("output").innerHTML=data[type].out;};
+</script>
+</body></html>
