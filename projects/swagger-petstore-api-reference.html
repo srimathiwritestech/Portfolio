@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Swagger Petstore API reference sample — API documentation by Srimathi R.">
+<title>Swagger Petstore API Reference — Srimathi R</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="../index.html">SR</a>
+<nav>
+<a href="../index.html">Home</a><a href="../index.html#expertise">Expertise</a>
+<a href="../index.html#samples">Work</a><a href="../index.html#ai-demo">AI demo</a>
+<a href="../about.html">About</a><a href="../contact.html">Contact</a>
+</nav>
+</header>
+
+<main>
+<section class="case-hero"><div class="wrap">
+<a class="back" href="../work.html">← Back to work</a>
+<p class="kicker" style="margin-top:34px">DEVELOPER DOCUMENTATION · API REFERENCE</p>
+<h1>Swagger Petstore<br><i>API Reference.</i></h1>
+<p class="case-lede">A portfolio-created API reference sample showing how I structure developer documentation around endpoint intent, request parameters, response behavior, schemas, examples, and verification.</p>
+<div class="meta">
+<div><span>TYPE</span><b>API reference</b></div>
+<div><span>FORMAT</span><b>REST / JSON</b></div>
+<div><span>SAMPLE API</span><b>Swagger Petstore</b></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-heading"><span>01</span><h2>Retrieve a pet by ID.</h2></div>
+<p style="max-width:720px;color:#606875;font-size:17px">Use this endpoint to retrieve detailed information about a specific pet using its unique identifier.</p>
+<div class="snippet" style="margin-top:35px"><span>GET · ENDPOINT</span><strong style="font-family:'DM Mono',monospace">/pet/{petId}</strong></div>
+<div class="split" style="margin-top:38px">
+<div><div class="kicker">BASE URL</div><p><code>https://petstore.swagger.io/v2</code></p></div>
+<div><div class="kicker">EXAMPLE REQUEST</div><p><code>https://petstore.swagger.io/v2/pet/983680</code></p></div>
+</div>
+</div></section>
+
+<section class="dark-section"><div class="wrap">
+<div class="section-heading light"><span>02</span><h2>Document what developers need before they call it.</h2></div>
+<p style="max-width:720px;color:#b8bfca;font-size:16px">This operation requires one path parameter. It does not require query parameters or a request body.</p>
+<div style="overflow-x:auto;margin-top:38px"><table style="width:100%;border-collapse:collapse;font-size:13px">
+<thead><tr style="border-bottom:1px solid #515a68;text-align:left">
+<th style="padding:14px 12px 14px 0">Parameter</th><th style="padding:14px 12px">Location</th><th style="padding:14px 12px">Type</th><th style="padding:14px 12px">Required</th><th style="padding:14px 0 14px 12px">Description</th>
+</tr></thead>
+<tbody><tr style="border-bottom:1px solid #424a59">
+<td style="padding:18px 12px 18px 0"><code>petId</code></td><td style="padding:18px 12px">Path</td><td style="padding:18px 12px">Integer</td><td style="padding:18px 12px">Yes</td><td style="padding:18px 0 18px 12px">Unique identifier of the pet to retrieve.</td>
+</tr></tbody></table></div>
+<div style="border-left:2px solid #c9f06b;padding:20px 24px;margin-top:35px;background:rgba(255,255,255,.04)">
+<strong>Request body</strong><p style="margin:6px 0 0;color:#b8bfca">Not required for this GET operation.</p>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-heading"><span>03</span><h2>Make response outcomes easy to scan.</h2></div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;border:1px solid var(--line);font-size:13px">
+<thead><tr style="background:var(--paper);border-bottom:1px solid var(--line);text-align:left"><th style="padding:15px">Status</th><th style="padding:15px">Description</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>200</code></td><td style="padding:15px">Successful retrieval of pet details.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>400</code></td><td style="padding:15px">Invalid ID supplied.</td></tr>
+<tr><td style="padding:15px"><code>404</code></td><td style="padding:15px">Pet not found.</td></tr>
+</tbody></table></div>
+<div class="snippet" style="margin-top:30px"><span>TESTED RESPONSE</span><strong>200 OK — pet details returned successfully.</strong></div>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="wrap">
+<div class="section-heading"><span>04</span><h2>Describe the response at field level.</h2></div>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;border:1px solid var(--line);font-size:13px">
+<thead><tr style="background:var(--paper);border-bottom:1px solid var(--line);text-align:left"><th style="padding:15px">Field</th><th style="padding:15px">Type</th><th style="padding:15px">Description</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>id</code></td><td style="padding:15px">Integer</td><td style="padding:15px">Unique identifier of the pet.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>category</code></td><td style="padding:15px">Object</td><td style="padding:15px">Category assigned to the pet.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>category.id</code></td><td style="padding:15px">Integer</td><td style="padding:15px">Unique category identifier.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>category.name</code></td><td style="padding:15px">String</td><td style="padding:15px">Name of the category.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>name</code></td><td style="padding:15px">String</td><td style="padding:15px">Name of the pet.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>photoUrls</code></td><td style="padding:15px">Array of strings</td><td style="padding:15px">List of photo URLs associated with the pet.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>tags</code></td><td style="padding:15px">Array of objects</td><td style="padding:15px">Tags associated with the pet.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>tags.id</code></td><td style="padding:15px">Integer</td><td style="padding:15px">Unique identifier of the tag.</td></tr>
+<tr style="border-bottom:1px solid var(--line)"><td style="padding:15px"><code>tags.name</code></td><td style="padding:15px">String</td><td style="padding:15px">Name of the tag.</td></tr>
+<tr><td style="padding:15px"><code>status</code></td><td style="padding:15px">String</td><td style="padding:15px">Current status of the pet.</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="dark-section"><div class="wrap">
+<div class="section-heading light"><span>05</span><h2>Show the shape of a successful response.</h2></div>
+<pre style="background:#0f1520;color:#f7f5ef;padding:28px;overflow:auto;font:13px/1.75 'DM Mono',monospace;border:1px solid #424a59">{
+  "id": 983680,
+  "category": {
+    "id": 983680,
+    "name": "kangs name"
+  },
+  "name": "doggie",
+  "photoUrls": [
+    "kangs url"
+  ],
+  "tags": [
+    {
+      "id": 983680,
+      "name": "kangs tag 983680"
+    }
+  ],
+  "status": "available"
+}</pre>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="section-heading"><span>06</span><h2>Give developers a runnable example.</h2></div>
+<p style="max-width:720px;color:#606875">A cURL example gives developers a quick way to make the request from a terminal and verify endpoint behavior.</p>
+<pre style="background:#172033;color:#f7f5ef;padding:28px;overflow:auto;font:13px/1.75 'DM Mono',monospace;margin-top:30px">curl --request GET \
+  --url https://petstore.swagger.io/v2/pet/983680 \
+  --header 'Accept: application/json'</pre>
+<a class="button" href="https://petstore.swagger.io/v2/pet/983680" target="_blank" rel="noopener" style="margin-top:10px">Open live API response ↗</a>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="wrap">
+<div class="section-heading"><span>07</span><h2>The documentation decisions behind the page.</h2></div>
+<div class="approach">
+<div><b>01 / INTENT</b><h2>Start with the task</h2><p>Lead with what the endpoint does instead of making developers decode the API structure first.</p></div>
+<div><b>02 / SCAN</b><h2>Structure for speed</h2><p>Separate request, response, schema, and examples so developers can jump to what they need.</p></div>
+<div><b>03 / PRECISION</b><h2>Use concrete language</h2><p>Describe parameters and response fields in terms of what developers need to do with them.</p></div>
+<div><b>04 / VERIFY</b><h2>Make it testable</h2><p>Provide a runnable cURL example and a link to the public API response.</p></div>
+</div>
+<div class="snippet" style="margin-top:45px"><span>PUBLIC SOURCE</span>
+<strong>This is an independently authored portfolio sample based on the public Swagger Petstore API. It is not official Swagger documentation.</strong>
+<p style="margin:8px 0 0"><a class="text-link" href="https://petstore.swagger.io/v2/swagger.json" target="_blank" rel="noopener">View the public OpenAPI specification ↗</a></p>
+</div>
+<div style="margin-top:40px"><a class="text-link" href="../work.html">← Back to selected work</a></div>
+</div></section>
+</main>
+
+<footer><span>© 2026 Srimathi R</span><span>Technical Writing · UX Writing · AI Product Content</span></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
